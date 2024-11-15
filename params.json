@@ -1,0 +1,6 @@
+{
+    "crop_param": 450,
+    "svd_components": 10,
+    "length_of_wood" : 130,
+    "distance_between_trace": 0.1
+}

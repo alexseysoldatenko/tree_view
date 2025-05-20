@@ -82,7 +82,7 @@ class Window(QMainWindow):
                     red_line = np.argmax(np.diff(self.seismogram, axis=0), axis=0) - 5
                     self.ax.plot(
                         np.arange(self.seismogram.shape[1]),
-                        np.ones(self.seismogram.shape[1]) * red_line,
+                        np.ones(self.seismogram.shape[1]) * red_line - 5,
                         "r",
                     )
                 if self.markers is not None:
@@ -97,8 +97,8 @@ class Window(QMainWindow):
                     self.x_new,
                     self.y_new,
                     c=self.color,
-                    cmap="gray",
                     marker="s",
+                    cmap="gray",
                 )
                 locs_x, _ = plt.xticks()
                 locs_y, _ = plt.yticks()
